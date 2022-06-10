@@ -1,9 +1,47 @@
 # reactChat
 
-Forked from [React Firebase Super Chat](https://github.com/fireship-io/react-firebase-chat)
+Initial **Steps** from [firebase](https://console.firebase.google.com/) to get started
 
-A simple fullstack chat demo with React and Firebase. 
+1. Create new Project
 
-Watch on full [React Firebase Chat Tutorial](https://youtu.be/zQyrwxMPm88) on YouTube. 
+2. Enable Google sign in method from `Authentication`
 
-[Live demo](https://fireship-demos.web.app/)
+3. Enable `Storage`
+
+4. Create new database from `Firestore Database` and **add** this rule
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+		match /messages/{docId} {
+      allow read: if request.auth.uid != null;
+      allow create: if canCreateMessage();
+    }
+    
+    function canCreateMessage() {
+      let isSignedIn = request.auth.uid != null;
+      let isOwner = request.auth.uid == request.resource.data.uid;
+      
+      let isNotBanned = exists(
+      	/databases/$(database)/documents/banned/$(request.auth.uid)
+      ) == false;
+      
+      return isSignedIn && isOwner && isNotBanned;
+    }
+  }
+}
+```
+
+5. `Add Firebase to your web app` and **copy** the variables from `const firebaseConfig`
+
+6. **Paste** it in app.js file
+
+```
+/src/app.js
+```
