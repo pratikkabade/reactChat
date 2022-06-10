@@ -4,7 +4,6 @@ import './App.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
@@ -21,7 +20,6 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
 
 
 function App() {
@@ -29,9 +27,9 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="App">
+    <div className="App noSelect">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <img src={'https://avatars.githubusercontent.com/u/76637730?v=4'} alt="logo" id="hrtLogo" draggable={false}/>
         <SignOut />
       </header>
 
@@ -53,7 +51,6 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
     </>
   )
 
@@ -105,7 +102,7 @@ function ChatRoom() {
 
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-      <button type="submit" disabled={!formValue}>🕊️</button>
+      <button type="submit" className='sendButton' disabled={!formValue}>Send</button>
 
     </form>
   </>)
@@ -119,7 +116,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="pic" draggable={false}/>
       <p>{text}</p>
     </div>
   </>)
