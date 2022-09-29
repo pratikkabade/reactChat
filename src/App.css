@@ -1,79 +1,80 @@
+html,
 body {
   background: var(--background1);
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-#hrtLogo{
+#hrtLogo {
   box-shadow: var(--shadowsmall);
   height: 50px;
   width: 50px;
+  border: none;
 }
 
 .App {
   text-align: center;
-  max-width: 728px;
   margin: 0 auto;
 }
 
 .App header {
   background-color: rgba(234, 249, 255, 0.6) !important;
-  backdrop-filter: blur(5px) !important;
-  height: 10vh;
-  min-height: 50px;
-  color: white;
+  backdrop-filter: blur(5px);
+  height: 70px;
+  color: rgb(83, 73, 73);
   position: fixed;
   width: 100%;
-  max-width: 728px;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 99;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   box-sizing: border-box;
-  border-radius: 20px;
 }
 
 .App section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 81vh;
   background-color: var(--white);
   border-radius: 20px;
 }
 
 main {
-  padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
+  padding: 100px 20px 0 20px;
+  height: 81vh;
+  margin: 0px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid var(--accent);
 }
 
 main::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 8px;
 }
 
 main::-webkit-scrollbar-track {
   background-color: var(--accentbackgorund);
 }
 
-main::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
 
 form {
-  height: 70px;
+  height: 60px;
   position: fixed;
   bottom: 0;
   background-color: var(--mainbackgorund);
   width: 100%;
-  max-width: 728px;
   display: flex;
   font-size: 1.5rem;
   border-radius: 20px;
+  padding: 0 0px 7px 0;
 }
 
 form button {
@@ -82,25 +83,28 @@ form button {
 
 
 input {
-  line-height: 1.5;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 20px;
   background: var(--mainbackgorund);
   color: black;
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 0px 10px 0px 10px;
   border-radius: 20px;
-}
-input:focus{
+  margin: 0 20px 0 20px;
   border: 1px solid #0b93f6;
-  border-radius: 20px;
 }
+
+input:focus {
+  border-radius: 20px;
+  box-shadow: var(--shadowtiny);
+}
+
 button {
-  background-color: var(--accent); /* Green */
+  background-color: var(--accent);
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -110,24 +114,30 @@ button {
   transition: 0.3s;
   background-color: var(--accent);
 }
+
 button:disabled {
   background-color: var(--accent);
   cursor: not-allowed;
 }
+
 button:disabled:hover {
   box-shadow: 0 1px 10px rgba(177, 7, 50, 0.781);
   cursor: not-allowed;
   border-radius: 30px;
 }
-button:hover{
+
+button:hover {
   filter: brightness(1.2);
   box-shadow: var(--shadowsmall);
   transition: 0.3s;
   border-radius: 40px;
 }
-.sendButton{
+
+.sendButton {
   font-size: 30px;
   border-radius: 30px;
+  max-width: 120px;
+  margin: 0 20px 0 0;
 }
 
 .sign-in {
@@ -135,16 +145,22 @@ button:hover{
   background: var(--accent);
   max-width: 400px;
   margin: 0 auto;
+  font-weight: 700;
 }
-.sign-out{
-  background: var(--red);
+
+.sign-out {
+  background: hsl(0, 97%, 60%);
+  font-weight: 700;
+  backdrop-filter: blur(0px) !important;
 }
-.sign-out:hover{
+
+.sign-out:hover {
   box-shadow: 0 1px 10px rgba(177, 7, 50, 0.781);
 }
 
 
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
@@ -159,6 +175,7 @@ p {
   color: white;
   text-align: center;
   user-select: text;
+  font-size: 20px;
 }
 
 .message {
@@ -176,15 +193,15 @@ p {
   background: #0b93f6;
   align-self: flex-end;
 }
+
 .received p {
   background: #e5e5ea;
   color: black;
 }
 
 img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin: 2px 5px;
 }
-
