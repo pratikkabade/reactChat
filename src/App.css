@@ -48,12 +48,36 @@ body {
 
 main {
   padding: 100px 20px 0 20px;
-  height: 81vh;
+  height: 80vh;
   margin: 0px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--accent);
+}
+
+@media screen and (min-height: 500px) {
+  main {
+    height: 65vh !important;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  main {
+    height: 70vh !important;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  main {
+    height: 73vh !important;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  main {
+    height: 77vh !important;
+  }
 }
 
 main::-webkit-scrollbar {
@@ -136,7 +160,7 @@ button:hover {
 .sendButton {
   font-size: 30px;
   border-radius: 30px;
-  max-width: 120px;
+  width: 120px;
   margin: 0 20px 0 0;
 }
 
@@ -190,12 +214,13 @@ p {
 
 .sent p {
   color: white;
-  background: #0b93f6;
+  background: var(--accent);
   align-self: flex-end;
 }
 
 .received p {
-  background: #e5e5ea;
+  background: var(--accentdim2);
+  border: 2px solid var(--accentdark);
   color: black;
 }
 
