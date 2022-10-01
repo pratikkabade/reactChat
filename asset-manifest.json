@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reactChat/static/css/main.de9454eb.chunk.css",
+    "main.css": "/reactChat/static/css/main.26454cfe.chunk.css",
     "main.js": "/reactChat/static/js/main.60878d3e.chunk.js",
     "main.js.map": "/reactChat/static/js/main.60878d3e.chunk.js.map",
     "runtime-main.js": "/reactChat/static/js/runtime-main.3649e7d4.js",
@@ -8,15 +8,15 @@
     "static/js/2.41cd6416.chunk.js": "/reactChat/static/js/2.41cd6416.chunk.js",
     "static/js/2.41cd6416.chunk.js.map": "/reactChat/static/js/2.41cd6416.chunk.js.map",
     "index.html": "/reactChat/index.html",
-    "precache-manifest.282f62851a0cf665e346e82c327bf959.js": "/reactChat/precache-manifest.282f62851a0cf665e346e82c327bf959.js",
+    "precache-manifest.64389660190e16396e4f0478a7d887cf.js": "/reactChat/precache-manifest.64389660190e16396e4f0478a7d887cf.js",
     "service-worker.js": "/reactChat/service-worker.js",
-    "static/css/main.de9454eb.chunk.css.map": "/reactChat/static/css/main.de9454eb.chunk.css.map",
+    "static/css/main.26454cfe.chunk.css.map": "/reactChat/static/css/main.26454cfe.chunk.css.map",
     "static/js/2.41cd6416.chunk.js.LICENSE.txt": "/reactChat/static/js/2.41cd6416.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3649e7d4.js",
     "static/js/2.41cd6416.chunk.js",
-    "static/css/main.de9454eb.chunk.css",
+    "static/css/main.26454cfe.chunk.css",
     "static/js/main.60878d3e.chunk.js"
   ]
 }
