@@ -47,8 +47,8 @@ body {
 }
 
 main {
-  padding: 100px 20px 0 20px;
-  height: 80vh;
+  padding: 10vh 20px 0 20px;
+  height: 75vh;
   margin: 0px;
   overflow-y: scroll;
   display: flex;
@@ -56,27 +56,9 @@ main {
   border-bottom: 1px solid var(--accent);
 }
 
-@media screen and (min-height: 500px) {
+@media screen and (min-width: 800px) {
   main {
-    height: 65vh !important;
-  }
-}
-
-@media screen and (min-height: 600px) {
-  main {
-    height: 70vh !important;
-  }
-}
-
-@media screen and (min-height: 700px) {
-  main {
-    height: 73vh !important;
-  }
-}
-
-@media screen and (min-height: 800px) {
-  main {
-    height: 77vh !important;
+    height: 80vh;
   }
 }
 
@@ -219,8 +201,8 @@ p {
 }
 
 .received p {
-  background: var(--accentdim2);
-  border: 2px solid var(--accentdark);
+  background: var(--accentdim4);
+  box-shadow: var(--shadowtiny);
   color: black;
 }
 
